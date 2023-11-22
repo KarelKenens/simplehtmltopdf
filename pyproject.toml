@@ -20,5 +20,9 @@ dependencies = [
     'selenium >= 4.15.2',
 ]
 
+[project.urls]
+Homepage = "https://github.com/KarelKenens/simplehtmltopdf"
+Issues = "https://github.com/KarelKenens/simplehtmltopdf/issues"
+
 [tool.hatch.version]
 path = "src/__about__.py"
