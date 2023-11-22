@@ -16,6 +16,8 @@ class WebDriverWrapper(AbstractContextManager):
                  implicit_wait: int = 10):
         options = webdriver.ChromeOptions()
         options.add_argument("--headless=new")
+        options.add_argument("--disable-dev-shm-usage")
+        options.add_argument("--no-sandbox")
         self.driver = webdriver.Chrome(options=options)
         self.driver.implicitly_wait(implicit_wait)
         self.wait_before_print = wait_before_print
