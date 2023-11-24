@@ -36,6 +36,7 @@ class WebDriverWrapper(AbstractContextManager):
         save_path = Path(save_path)
         self.driver.get(url)
         self.driver.execute_script("window.scrollTo(0, document.body.scrollHeight);")
+        self.driver.execute_script("window.scrollTo(0, 0);")
         time.sleep(self.wait_before_print)
         b64 = self.driver.print_page()
         bites = b64decode(b64, validate=True)
